@@ -676,7 +676,5 @@ Contributions make the open source community amazing! Any contributions you make
 </br>
 
 <div align="center">
-  
-Velocia API - Enterprise-Grade Transportation Backend Solution.
-
+  <p><b>Velocia</b> - <i>A modern transportation backend solution.</i></p>
 </div>
