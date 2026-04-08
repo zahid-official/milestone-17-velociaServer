@@ -21,7 +21,6 @@ a robust foundation for transportation applications with real-time capabilities,
 secure authentication, and comprehensive administrative controls.</p>
 </div>
 
-
 <div align="center">
     
   [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/zahid-official/milestone-17)
@@ -40,6 +39,7 @@ secure authentication, and comprehensive administrative controls.</p>
 </div>
 
 ## ✨ Features
+
 <table  align="center">
   <tr>
     <td width="50%">
@@ -81,8 +81,8 @@ secure authentication, and comprehensive administrative controls.</p>
 </table>
 </br>
 
-
 ## 🏗️ System Architecture
+
 ```mermaid
 graph TB
     subgraph "Client Layer"
@@ -117,6 +117,7 @@ graph TB
     G & H & I & J & K --> M
     I & J --> N
 ```
+
 <div align="center">
     
 | Design Principle              | Description                                                           |
@@ -128,8 +129,8 @@ graph TB
 | **📊 Observable**             | Comprehensive logging, monitoring, and tracing capabilities           |
 </div>
 
-
 ## 🛠️ **Tech Stack**
+
 <div align="center">
     
 ### **Core Technologies**
@@ -201,10 +202,12 @@ graph TB
 | 📧 **Communication** | `Nodemailer` `Socket.io`     | Email & real-time            |
 | 🧪 **Testing**       | `Postman`                    | Endpoint tests               |
 | 🚀 **Deployment**    | `Vercel`                     | Cloud deployment             |
+
 </div>
 </br>
 
 ## 🚀 **Getting Started**
+
 ### **⚡ Quick Installation**
 
 ```bash
@@ -229,15 +232,17 @@ npm run dev
 ### **📦 Using MongoDB Atlas (Recommended)**
 
 For easier setup without local MongoDB installation:
+
 1. Create free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 2. Create a cluster and get connection string
 3. Update `.env` with your connection string:
-   
+
    ```env
    MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/velociaDB
    ```
 
 ### **🔧 Environment Configuration**
+
 <details>
 <summary><b>Click to view essential .env variables</b></summary>
 
@@ -672,6 +677,6 @@ Contributions make the open source community amazing! Any contributions you make
 
 <div align="center">
   
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
+Velocia API - Enterprise-Grade Transportation Backend Solution.
 
 </div>

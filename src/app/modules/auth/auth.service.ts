@@ -16,13 +16,13 @@ const regenerateAccessToken = async (refreshToken: string) => {
   if (!refreshToken) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      "No refresh token provided, authorization denied"
+      "No refresh token provided, authorization denied",
     );
   }
 
   const verifiedRefreshToken = verifyJWT(
     refreshToken,
-    envVars.JWT_REFRESH_SECRET
+    envVars.JWT_REFRESH_SECRET,
   ) as JwtPayload;
 
   // Check potential errors
@@ -34,7 +34,7 @@ const regenerateAccessToken = async (refreshToken: string) => {
   if (!user.isVerified) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      "User is not verified. Please verify your email to proceed."
+      "User is not verified. Please verify your email to proceed.",
     );
   }
 
@@ -44,14 +44,14 @@ const regenerateAccessToken = async (refreshToken: string) => {
   ) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      `User is ${user.accountStatus}. Please contact support for more information.`
+      `User is ${user.accountStatus}. Please contact support for more information.`,
     );
   }
 
   if (user.isDeleted) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      "User is deleted. Please contact support for more information."
+      "User is deleted. Please contact support for more information.",
     );
   }
 
@@ -71,7 +71,7 @@ const sendOTP = async (email: string) => {
   if (user.isVerified) {
     throw new AppError(
       httpStatus.BAD_REQUEST,
-      "User already verified. Please login"
+      "User already verified. Please login",
     );
   }
 
@@ -111,7 +111,7 @@ const verifyOTP = async (email: string, otp: string) => {
   if (user.isVerified) {
     throw new AppError(
       httpStatus.BAD_REQUEST,
-      "User already verified. Please login"
+      "User already verified. Please login",
     );
   }
 
@@ -122,7 +122,7 @@ const verifyOTP = async (email: string, otp: string) => {
   if (!verifyOtp) {
     throw new AppError(
       httpStatus.BAD_REQUEST,
-      "OTP expired or invalid. Please request a new one"
+      "OTP expired or invalid. Please request a new one",
     );
   }
 
@@ -143,7 +143,7 @@ const verifyOTP = async (email: string, otp: string) => {
 const changePassword = async (
   decodedToken: JwtPayload,
   oldPassword: string,
-  newPassword: string
+  newPassword: string,
 ) => {
   const user = await User.findById(decodedToken?.userId);
   if (!user) {
@@ -152,7 +152,7 @@ const changePassword = async (
 
   const isPasswordMatched = await bcrypt.compare(
     oldPassword,
-    user.password as string
+    user.password as string,
   );
   if (!isPasswordMatched) {
     throw new AppError(httpStatus.UNAUTHORIZED, "Old password is incorrect");
@@ -175,7 +175,7 @@ const forgotPassword = async (email: string) => {
   if (!user.isVerified) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      "User is not verified. Please verify your email to proceed."
+      "User is not verified. Please verify your email to proceed.",
     );
   }
 
@@ -185,14 +185,14 @@ const forgotPassword = async (email: string) => {
   ) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      `User is ${user.accountStatus}. Please contact support for more information.`
+      `User is ${user.accountStatus}. Please contact support for more information.`,
     );
   }
 
   if (user.isDeleted) {
     throw new AppError(
       httpStatus.UNAUTHORIZED,
-      "User is deleted. Please contact support for more information."
+      "User is deleted. Please contact support for more information.",
     );
   }
 
@@ -219,7 +219,7 @@ const forgotPassword = async (email: string) => {
 const resetPassword = async (
   userId: string,
   id: string,
-  newPassword: string
+  newPassword: string,
 ) => {
   if (userId !== id) {
     throw new AppError(httpStatus.UNAUTHORIZED, "Invalid user");
@@ -233,7 +233,7 @@ const resetPassword = async (
   // Hash the new password and save to database
   const hashedPassword = await bcrypt.hash(
     newPassword,
-    envVars.BCRYPT_SALT_ROUNDS
+    envVars.BCRYPT_SALT_ROUNDS,
   );
   user.password = hashedPassword;
   await user.save();
