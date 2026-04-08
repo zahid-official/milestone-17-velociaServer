@@ -23,7 +23,7 @@ secure authentication, and comprehensive administrative controls.</p>
 
 <div align="center">
     
-  [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/zahid-official/milestone-17)
+  [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/zahid-official/milestone-17-velociaServer)
   [![Node.js](https://img.shields.io/badge/Node.js-18.x-3C873A.svg?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
   [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
@@ -35,7 +35,7 @@ secure authentication, and comprehensive administrative controls.</p>
   [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black.svg?style=for-the-badge&logo=vercel)](https://vercel.com)
   [![Redis](https://img.shields.io/badge/Redis-7.0-DC382D.svg?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
   [![License](https://img.shields.io/badge/license-MIT-22333b.svg?style=for-the-badge)](LICENSE)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-0081a7.svg?style=for-the-badge)](https://github.com/zahid-official/milestone-17/pulls)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-0081a7.svg?style=for-the-badge)](https://github.com/zahid-official/milestone-17-velociaServer/pulls)
 </div>
 
 ## ✨ Features
@@ -212,8 +212,8 @@ graph TB
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/zahid-official/milestone-17.git
-cd milestone-17
+git clone https://github.com/zahid-official/milestone-17-velociaServer.git
+cd milestone-17-velociaServer
 
 # 2. Install dependencies
 npm install
@@ -601,7 +601,7 @@ project/
 
 <div>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zahid-official/milestone-17)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zahid-official/milestone-17-velociaServer)
 
 </div>
 
